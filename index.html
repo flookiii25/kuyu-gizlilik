@@ -23,11 +23,13 @@
 
 <section id="tr">
 <h1>Kuyu — Gizlilik Politikası</h1>
-<p class="muted">Yürürlük tarihi: 18 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
+<p class="muted">Yürürlük tarihi: 21 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
 
 <h2>Kısaca</h2>
-<p>Kuyu hesap istemez, reklam göstermez, analiz ya da izleme aracı kullanmaz ve kişisel verini
-hiçbir sunucuya göndermez. Oyunun kendine ait bir sunucusu yoktur.</p>
+<p>Kuyu hesap istemez, reklam göstermez, analiz ya da izleme aracı kullanmaz. Oyunun kendine ait
+bir sunucusu yoktur. Tek istisna internet üzerinden canlı düellodur: bunu başlattığında maç,
+Unity'nin bağlantı hizmeti (Unity Relay) üzerinden geçer ve bunun için isimsiz bir oyuncu
+kimliği oluşturulur (aşağıda).</p>
 
 <h2>Cihazında saklananlar</h2>
 <ul>
@@ -36,6 +38,8 @@ hiçbir sunucuya göndermez. Oyunun kendine ait bir sunucusu yoktur.</p>
   <li>Android'in otomatik yedekleme özelliği açıksa bu kayıt Google hesabına yedeklenir ve yeni
       telefonda geri yüklenir. Bu yedeği Google yönetir; TrueIQ Labs bu verilere erişemez.
       Yedeği Android ayarlarından kapatabilirsin.</li>
+  <li>Sonuç ekranından "Paylaş" dediğinde ekranın görüntüsü telefonunun Resimler/Kuyu klasörüne
+      kaydedilir ve senin seçtiğin uygulamaya gönderilir.</li>
 </ul>
 
 <h2>Uygulama içi satın almalar</h2>
@@ -48,23 +52,31 @@ bu işlemde Google'ın gizlilik politikası geçerlidir:
 <ul>
   <li><b>Düello kodu:</b> Paylaştığın kod; oyuncu adını, puanını ve oyun hamlelerini içerir.
       Kodu kime göndereceğini sen seçersin (Android paylaşım menüsü).</li>
-  <li><b>Canlı düello:</b> Aynı Wi-Fi ağındaki ya da kişisel erişim noktasındaki iki telefon
-      doğrudan birbirine bağlanır. Yalnızca oyun hamleleri ve oyuncu adı iki cihaz arasında
-      gider; internete ya da bir sunucuya hiçbir şey gönderilmez.</li>
+  <li><b>Aynı Wi-Fi'de canlı düello:</b> İki telefon doğrudan birbirine bağlanır. Yalnızca oyun
+      hamleleri ve oyuncu adı iki cihaz arasında gider; bir sunucuya hiçbir şey gönderilmez.</li>
+  <li><b>İnternet üzerinden canlı düello:</b> Yalnızca sen bir canlı oda kurduğunda ya da internet
+      koduyla katıldığında, oyun Unity Technologies'in Unity Authentication hizmetinde isimsiz bir
+      oyuncu kimliği oluşturur ve maç Unity Relay üzerinden geçer. Bu kimlik adın, e-postan ya da
+      cihaz reklam kimliğinle ilişkilendirilmez; yalnızca bağlantıyı kurmak için kullanılır. Maç
+      sırasında oyun hamleleri, oyuncu adın ve bağlantı için gereken IP adresin Unity'nin
+      sunucularından rakibine iletilir; TrueIQ Labs bunları saklamaz. Unity'nin gizlilik politikası:
+      <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
 
 <h2>İzinler</h2>
 <ul>
-  <li><b>İnternet / Wi-Fi durumu / çoklu yayın:</b> yalnızca yerel ağdaki canlı düello için.</li>
+  <li><b>İnternet / Wi-Fi durumu / çoklu yayın:</b> yalnızca canlı düello için.</li>
   <li><b>Titreşim:</b> dokunsal geri bildirim için.</li>
 </ul>
 
 <h2>Çocuklar</h2>
-<p>Kuyu çocuklardan bilerek kişisel veri toplamaz; zaten hiç kimseden kişisel veri toplamaz.</p>
+<p>Kuyu çocuklardan bilerek kişisel veri toplamaz.</p>
 
 <h2>Verilerini silmek</h2>
-<p>Tüm veriler cihazındadır: oyunu kaldırmak ya da Android ayarlarından uygulama verilerini
-temizlemek her şeyi siler. Google hesabındaki yedeği Google hesap ayarlarından silebilirsin.</p>
+<p>Oyundaki tüm veriler cihazındadır: oyunu kaldırmak ya da Android ayarlarından uygulama
+verilerini temizlemek her şeyi siler; isimsiz Unity oyuncu kimliği de cihazdan silinir ve bir
+daha kullanılmaz. Google hesabındaki yedeği Google hesap ayarlarından silebilirsin. Unity'deki
+isimsiz kimliğin silinmesini istersen bize yaz.</p>
 
 <h2>Değişiklikler ve iletişim</h2>
 <p>Bu politika değişirse güncel hali bu sayfada yayımlanır. Sorular için:
@@ -75,11 +87,13 @@ temizlemek her şeyi siler. Google hesabındaki yedeği Google hesap ayarlarınd
 
 <section id="en">
 <h1>Kuyu — Privacy Policy</h1>
-<p class="muted">Effective date: November 18, 2026 · Developer: TrueIQ Labs</p>
+<p class="muted">Effective date: November 21, 2026 · Developer: TrueIQ Labs</p>
 
 <h2>In short</h2>
-<p>Kuyu requires no account, shows no ads, uses no analytics or tracking tools, and sends no
-personal data to any server. The game has no server of its own.</p>
+<p>Kuyu requires no account, shows no ads and uses no analytics or tracking tools. The game has no
+server of its own. The one exception is live duels over the internet: when you start one, the
+match runs through Unity's connection service (Unity Relay), which needs an anonymous player ID
+(see below).</p>
 
 <h2>Stored on your device</h2>
 <ul>
@@ -88,6 +102,8 @@ personal data to any server. The game has no server of its own.</p>
   <li>If Android's automatic backup is on, this save is backed up to your Google account and
       restored on a new phone. Google manages this backup; TrueIQ Labs cannot access it. You can
       turn backup off in Android settings.</li>
+  <li>When you tap "Share" on a result screen, a screenshot is saved to your phone's
+      Pictures/Kuyu folder and sent to the app you choose.</li>
 </ul>
 
 <h2>In-app purchases</h2>
@@ -100,24 +116,31 @@ component; Google's privacy policy applies:
 <ul>
   <li><b>Duel code:</b> a code you share contains your player name, score and game moves. You
       choose who receives it (Android share menu).</li>
-  <li><b>Live duel:</b> two phones on the same Wi-Fi network or personal hotspot connect directly.
-      Only game moves and player names travel between the two devices; nothing is sent to the
-      internet or to a server.</li>
+  <li><b>Live duel on the same Wi-Fi:</b> the two phones connect directly. Only game moves and
+      player names travel between them; nothing is sent to a server.</li>
+  <li><b>Live duel over the internet:</b> only when you host a live room or join with an online
+      code, the game creates an anonymous player ID with Unity Technologies' Unity Authentication
+      service and the match runs through Unity Relay. This ID is not linked to your name, email or
+      advertising ID and is used only to set up the connection. During the match, game moves, your
+      player name and the IP address needed for the connection pass through Unity's servers to your
+      opponent; TrueIQ Labs does not store them. Unity's privacy policy:
+      <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
 
 <h2>Permissions</h2>
 <ul>
-  <li><b>Internet / Wi-Fi state / multicast:</b> only for live duels on the local network.</li>
+  <li><b>Internet / Wi-Fi state / multicast:</b> only for live duels.</li>
   <li><b>Vibration:</b> for haptic feedback.</li>
 </ul>
 
 <h2>Children</h2>
-<p>Kuyu does not knowingly collect personal data from children; it collects personal data from
-no one.</p>
+<p>Kuyu does not knowingly collect personal data from children.</p>
 
 <h2>Deleting your data</h2>
-<p>All data lives on your device: uninstalling the game or clearing its app data in Android
-settings deletes everything. You can delete the backup in your Google account settings.</p>
+<p>All game data lives on your device: uninstalling the game or clearing its app data in Android
+settings deletes everything, including the anonymous Unity player ID on the device, which is then
+never used again. You can delete the backup in your Google account settings. To have the anonymous
+ID deleted at Unity, write to us.</p>
 
 <h2>Changes and contact</h2>
 <p>If this policy changes, the current version will be published on this page. Questions:
