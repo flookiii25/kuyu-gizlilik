@@ -23,14 +23,15 @@
 
 <section id="tr">
 <h1>Kuyu — Gizlilik Politikası</h1>
-<p class="muted">Yürürlük tarihi: 24 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
+<p class="muted">Yürürlük tarihi: 25 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
 
 <h2>Kısaca</h2>
 <p>Kuyu hesap istemez, reklam göstermez, analiz ya da izleme aracı kullanmaz. Oyunun kendine ait
 bir sunucusu yoktur. Tek istisna isteğe bağlı çevrimiçi Arena özellikleridir (internet üzerinden
 canlı düello, Hızlı Eşleşme ve isteğe bağlı Küresel Sıralama): bunları kullandığında bağlantı
 Unity Gaming Services (Authentication, Relay, Lobby ve Leaderboards) üzerinden geçer ve bunun için
-isimsiz bir oyuncu kimliği oluşturulur (aşağıda).</p>
+isimsiz bir oyuncu kimliği oluşturulur (aşağıda). Ayrıca internet varken günlük ödüller için kimliksiz
+bir saat doğrulaması yapılır (aşağıda).</p>
 
 <h2>Cihazında saklananlar</h2>
 <ul>
@@ -71,9 +72,16 @@ bu işlemde Google'ın gizlilik politikası geçerlidir:
       <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
 
+<h2>Saat doğrulaması</h2>
+<p>Günlük ödüllerin telefonun saatini ileri alarak toplanmasını önlemek için oyun, internet varken
+Android'in kendi bağlantı denetimi adresine (connectivitycheck.gstatic.com) kısa bir istek gönderir ve
+yalnızca cevabın saatini okur. İstek kimlik, oyuncu adı ya da oyun verisi taşımaz; telefonun bu adrese
+zaten düzenli olarak gittiği bilinir. İsteği alan sunucuyu Google işletir ve bağlantı için IP adresin
+oraya ulaşır; TrueIQ Labs bu bilgiyi görmez.</p>
+
 <h2>İzinler</h2>
 <ul>
-  <li><b>İnternet / Wi-Fi durumu / çoklu yayın:</b> yalnızca canlı düello için.</li>
+  <li><b>İnternet / Wi-Fi durumu / çoklu yayın:</b> canlı düello ve saat doğrulaması için.</li>
   <li><b>Titreşim:</b> dokunsal geri bildirim için.</li>
 </ul>
 
@@ -96,14 +104,14 @@ Küresel sıralama'yı kapat. İstersen bize yazarak da silinmesini isteyebilirs
 
 <section id="en">
 <h1>Kuyu — Privacy Policy</h1>
-<p class="muted">Effective date: November 24, 2026 · Developer: TrueIQ Labs</p>
+<p class="muted">Effective date: November 25, 2026 · Developer: TrueIQ Labs</p>
 
 <h2>In short</h2>
 <p>Kuyu requires no account, shows no ads and uses no analytics or tracking tools. The game has no
 server of its own. The one exception is optional online Arena features (internet live duels, Quick
 Match, and Global Leaderboards): when you use them, the connection runs through Unity Gaming
 Services (Authentication, Relay, Lobby and Leaderboards), which uses an anonymous player ID
-(see below).</p>
+(see below). When online, the game also performs an anonymous clock check for daily rewards (see below).</p>
 
 <h2>Stored on your device</h2>
 <ul>
@@ -143,9 +151,16 @@ component; Google's privacy policy applies:
       <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
 
+<h2>Clock check</h2>
+<p>To stop daily rewards from being collected by moving the phone's clock forward, when you are online
+the game sends a short request to Android's own connectivity-check address
+(connectivitycheck.gstatic.com) and reads only the time of the reply. The request carries no ID,
+player name or game data; phones already contact this address regularly. The server is operated by
+Google and your IP address reaches it for the connection; TrueIQ Labs does not see it.</p>
+
 <h2>Permissions</h2>
 <ul>
-  <li><b>Internet / Wi-Fi state / multicast:</b> only for live duels.</li>
+  <li><b>Internet / Wi-Fi state / multicast:</b> for live duels and the clock check.</li>
   <li><b>Vibration:</b> for haptic feedback.</li>
 </ul>
 
