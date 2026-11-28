@@ -23,14 +23,15 @@
 
 <section id="tr">
 <h1>Kuyu — Gizlilik Politikası</h1>
-<p class="muted">Yürürlük tarihi: 25 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
+<p class="muted">Yürürlük tarihi: 28 Kasım 2026 · Geliştirici: TrueIQ Labs</p>
 
 <h2>Kısaca</h2>
 <p>Kuyu hesap istemez, reklam göstermez, analiz ya da izleme aracı kullanmaz. Oyunun kendine ait
 bir sunucusu yoktur. Tek istisna isteğe bağlı çevrimiçi Arena özellikleridir (internet üzerinden
 canlı düello, Hızlı Eşleşme ve isteğe bağlı Küresel Sıralama): bunları kullandığında bağlantı
-Unity Gaming Services (Authentication, Relay, Lobby ve Leaderboards) üzerinden geçer ve bunun için
-isimsiz bir oyuncu kimliği oluşturulur (aşağıda). Ayrıca internet varken günlük ödüller için kimliksiz
+Unity Gaming Services (Authentication, Relay, Lobby, Leaderboards ve Cloud Code) üzerinden geçer ve
+bunun için isimsiz bir oyuncu kimliği oluşturulur (aşağıda). Sıralamaya gönderilen skorlar hileye
+karşı Google Play Integrity ile doğrulanır (aşağıda). Ayrıca internet varken günlük ödüller için kimliksiz
 bir saat doğrulaması yapılır (aşağıda).</p>
 
 <h2>Cihazında saklananlar</h2>
@@ -72,6 +73,16 @@ bu işlemde Google'ın gizlilik politikası geçerlidir:
       <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
 
+<h2>Skor doğrulaması (hile önleme)</h2>
+<p>Küresel Sıralama'ya katıldıysan skorun tabloya doğrudan yazılmaz; önce Unity Cloud Code üzerinde
+çalışan küçük bir doğrulama betiğine gider. Betik skorun oyun kurallarına uyduğunu ve oyuncu adında
+uygunsuz kelime olmadığını denetler. Bunun için oyun, Google Play Integrity API'den bir doğrulama jetonu
+alıp skorla birlikte gönderir; betik jetonu çözmesi için Google'a iletir. Jeton, oyunun
+Google Play'den yüklenmiş değiştirilmemiş sürüm olduğunu ve cihazın bütünlük durumunu bildirir; yalnızca
+o skor isteğine bağlıdır ve adını, e-postanı ya da cihaz reklam kimliğini içermez. Jetonu Google üretir
+ve Google'ın gizlilik politikası geçerlidir. Doğrulama yalnızca hileli skorları reddetmek için kullanılır;
+TrueIQ Labs jetonu saklamaz. Sıralamaya katılmazsan bu doğrulama hiç yapılmaz.</p>
+
 <h2>Saat doğrulaması</h2>
 <p>Günlük ödüllerin telefonun saatini ileri alarak toplanmasını önlemek için oyun, internet varken
 Android'in kendi bağlantı denetimi adresine (connectivitycheck.gstatic.com) kısa bir istek gönderir ve
@@ -104,13 +115,14 @@ Küresel sıralama'yı kapat. İstersen bize yazarak da silinmesini isteyebilirs
 
 <section id="en">
 <h1>Kuyu — Privacy Policy</h1>
-<p class="muted">Effective date: November 25, 2026 · Developer: TrueIQ Labs</p>
+<p class="muted">Effective date: November 28, 2026 · Developer: TrueIQ Labs</p>
 
 <h2>In short</h2>
 <p>Kuyu requires no account, shows no ads and uses no analytics or tracking tools. The game has no
 server of its own. The one exception is optional online Arena features (internet live duels, Quick
 Match, and Global Leaderboards): when you use them, the connection runs through Unity Gaming
-Services (Authentication, Relay, Lobby and Leaderboards), which uses an anonymous player ID
+Services (Authentication, Relay, Lobby, Leaderboards and Cloud Code), which uses an anonymous player
+ID (see below). Scores sent to the rankings are checked against cheating with Google Play Integrity
 (see below). When online, the game also performs an anonymous clock check for daily rewards (see below).</p>
 
 <h2>Stored on your device</h2>
@@ -150,6 +162,17 @@ component; Google's privacy policy applies:
       through Unity's servers; TrueIQ Labs does not separately store them. Unity's privacy policy:
       <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
 </ul>
+
+<h2>Score verification (anti-cheat)</h2>
+<p>If you joined the Global rankings, your score is not written to the table directly; it first goes
+to a small verification script running on Unity Cloud Code, which checks that the score follows the
+game's rules and that the display name contains no offensive words. For this, the game requests a
+verification token from the Google Play Integrity API and sends it with the score; the script passes
+the token to Google to decode it. The token tells whether the game is the unmodified version installed from
+Google Play and reports the device's integrity status; it is tied to that one score request and does
+not contain your name, email or advertising ID. Google issues the token and Google's privacy policy
+applies. Verification is used only to reject cheated scores; TrueIQ Labs does not store the token. If
+you do not join the rankings, this check never happens.</p>
 
 <h2>Clock check</h2>
 <p>To stop daily rewards from being collected by moving the phone's clock forward, when you are online
